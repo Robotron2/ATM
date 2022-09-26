@@ -1,5 +1,7 @@
 let mainBal;
 
+// localStorage.setItem("balance", 100000)
+
 const withDrawBtn = document.getElementById("withdrawBtn")
 const balanceBtn = document.getElementById("balBtn")
 const transferBtn = document.getElementById("transferBtn")
@@ -11,13 +13,10 @@ const withDraw5k = document.getElementById("fiveThousand")
 const withDraw10k = document.getElementById("tenThousand")
 
 const transfer1k = document.getElementById("transferOneThousand")
-const transfer2k = document.getElementById("transferTneThousand")
+const transfer2k = document.getElementById("transferTwoThousand")
 const transfer5k = document.getElementById("transferFiveThousand")
 const transfer10k = document.getElementById("transferTenThousand")
 
-transfer1k.addEventListener("click", () => {
-    alert("working")
-})
 
 if (localStorage.getItem("balance")) {
     mainBal = parseInt(localStorage.getItem("balance"))
@@ -29,6 +28,8 @@ let currentBal = parseInt(localStorage.getItem("balance"))
 
 let displayScreen = document.getElementById("displayDiv")
 
+
+// WithDraw Section
 withDraw10k.addEventListener("click", () => {
     let dbBal = parseInt(localStorage.getItem("balance"))
 
@@ -95,9 +96,6 @@ withDraw1k.addEventListener("click", () => {
         displayScreen.innerHTML = `Insufficient funds`
     }
 })
-
-
-
 
 balanceBtn.addEventListener("click", () => {
     displayScreen.innerHTML = `Your balance is ${mainBal}`
