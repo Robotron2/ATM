@@ -5,27 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>ATM</title>
 </head>
 
 <body>
     <div class="main-div">
-        <div id="displayDiv">
-            <h4>Welcome</h4>
-        </div>
-        <div class="controls">
-            <button id="withdrawBtn" class="btn">Withdrawal</button>
-            <button id="balBtn" class="btn">Balance</button>
-            <button id="transferBtn" class="btn">Transfer</button>
-            <button id="airBtn" class="btn">Airtime</button>
-        </div>
-        <div class="controls hide">
-            <button id="oneThousand" value="1000" class="btn">1000</button>
-            <button id="twoThousand" value="2000" class="btn">2000</button>
-            <button id="fiveThousand" value="5000" class="btn">5000</button>
-            <button id="tenThousand" value="10000" class="btn">10000</button>
-        </div>
+        <center>
+            <div id="displayDiv">
+                <h4>Welcome to your ATM</h4>
+                <p>...enjoy real banking experience</p>
+            </div>
+
+            <div class="controls" id="mainNavigation">
+                <button id="withdrawBtn" class="btn btn-outline-success btn-lg">Withdrawal</button>
+                <button id="balBtn" class="btn btn-lg btn-outline-primary">Balance</button>
+                <button id="transferBtn" class="btn btn-lg btn-outline-danger">Transfer</button>
+                <button id="airBtn" class="btn btn-lg btn-outline-warning">Airtime</button>
+            </div>
+            <div class="controls hide" id="withDrawKeys">
+                <button id="oneThousand" value="1000" class="btn btn-lg btn-primary">1000</button>
+                <button id="twoThousand" value="2000" class="btn btn-lg btn-primary">2000</button>
+                <button id="fiveThousand" value="5000" class="btn btn-lg btn-primary">5000</button>
+                <button id="tenThousand" value="10000" class="btn btn-lg btn-primary">10000</button>
+            </div>
+        </center>
     </div>
     <script src="index.js"></script>
 </body>

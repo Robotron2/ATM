@@ -17,6 +17,12 @@ const transfer2k = document.getElementById("transferTwoThousand")
 const transfer5k = document.getElementById("transferFiveThousand")
 const transfer10k = document.getElementById("transferTenThousand")
 
+withDrawBtn.addEventListener("click", () => {
+    document.getElementById("mainNavigation").classList.add("hide")
+    document.getElementById("withDrawKeys").classList.remove("hide")
+})
+
+
 
 if (localStorage.getItem("balance")) {
     mainBal = parseInt(localStorage.getItem("balance"))
@@ -45,6 +51,8 @@ withDraw10k.addEventListener("click", () => {
     } else {
         displayScreen.innerHTML = `Insufficient funds`
     }
+    document.getElementById("mainNavigation").classList.remove("hide")
+    document.getElementById("withDrawKeys").classList.add("hide")
 })
 
 withDraw5k.addEventListener("click", () => {
@@ -62,6 +70,8 @@ withDraw5k.addEventListener("click", () => {
     } else {
         displayScreen.innerHTML = `Insufficient funds`
     }
+    document.getElementById("mainNavigation").classList.remove("hide")
+    document.getElementById("withDrawKeys").classList.add("hide")
 })
 
 withDraw2k.addEventListener("click", () => {
@@ -79,6 +89,8 @@ withDraw2k.addEventListener("click", () => {
     } else {
         displayScreen.innerHTML = `Insufficient funds`
     }
+    document.getElementById("mainNavigation").classList.remove("hide")
+    document.getElementById("withDrawKeys").classList.add("hide")
 })
 withDraw1k.addEventListener("click", () => {
     let dbBal = parseInt(localStorage.getItem("balance"))
@@ -95,8 +107,11 @@ withDraw1k.addEventListener("click", () => {
     } else {
         displayScreen.innerHTML = `Insufficient funds`
     }
+    document.getElementById("mainNavigation").classList.remove("hide")
+    document.getElementById("withDrawKeys").classList.add("hide")
 })
 
 balanceBtn.addEventListener("click", () => {
     displayScreen.innerHTML = `Your balance is ${mainBal}`
+
 })
